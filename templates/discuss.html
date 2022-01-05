@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="scenery.css">
+    <link rel="stylesheet" type="text/css" href="discuss.css">
+</head>
+<body>
+ <header>
+   <div><img src="./图片/scenery1.png"></div>
+   <div><img src="./图片/scenery2.png"></div>
+   <div><img src="./图片/scenery3.png"></div>
+   <div><img src="./图片/scenery4.png"></div>
+   <div><img src="./图片/scenery5.png"></div>
+   <div><img src="./图片/scenery6.png"></div> 
+  </header>
+    <form action="/ft/" method="post">
+        {% csrf_token %}
+<div class="release">
+  
+   <div class="t-title">名 称<input type="text" placeholder="输入名称" maxlength="20" name="title"></div>
+   <div class="t-introduce" >简 述<textarea rows="3" cols="40" placeholder="进行简要概述" name="desc"></textarea></div>
+   <div class="t-body">内 容<textarea rows="10" cols="100" placeholder="输入主要内容" name="content"></textarea></div>
+   <div class="t-select">选 择 分 类
+       <input type="radio" name="category">
+       <select size="3" multiple>
+           <option value="" selected>体育</option>
+           <option value="">教育</option>
+           <option value="">新闻</option>
+       </select>
+       <input type="radio" name="category" value="">
+       <input type="text"  maxlength="10" style="font-size: 1.2rem;" placeholder="输入自定义分类">
+       <button type="submit">提交</button>
+    </div>
+   
+</div>
+  </form>
+<div class="foot">
+   <p>Copyrights 2020  你不懂'爷的拽 &copy; All rights reserved. 湖北武汉</p>    
+</div>
+</body>
+     <script src="scenery.js"></script>
+
+</html>

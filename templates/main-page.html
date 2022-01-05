@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试页面</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/scenery.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main-page.css">
+</head>
+<body>
+     <header>
+   <div><img src="/static/img/scenery1.png"></div>
+   <div><img src="/static/img/scenery2.png"></div>
+   <div><img src="/static/img/scenery3.png"></div>
+   <div><img src="/static/img/scenery4.png"></div>
+   <div><img src="/static/img/scenery5.png"></div>
+   <div><img src="/static/img/scenery6.png"></div>
+  </header>
+<div class="container">
+    <span>欢迎{{ username }}</span>
+    {% for post in postList %}
+  <a href="/post/{{ post.id }}">
+    <div class="messageBox" >
+      <time>{{ post.created|date:'Y-m-d H:i:s' }}</time><br>
+    <b style="font-size: 1.6rem;">标 题:{{ post.title }}</b>
+    <p style="font-size: 1.4rem;">简 述:{{ post.desc }}</p>
+      {% for t in post.tag.all %}
+            <p style="font-size:1.2rem;">标 签:{{ t.tname}}</p>
+      {% endfor %}
+  </div>
+      </a>
+    {% endfor %}
+</div>
+<form>
+<div class="fenye">
+    {% for page in pageList %}
+            {% if currentNum == page %}
+                <span>{{ page }}</span>
+            {% else %}
+                <a  href=" /page/{{ page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+</div>
+</form>
+      <a href="#top">
+   <img src="/static/img/箭头.png" class="anchor">
+    </a>
+<div class="foot">
+   <p>Copyrights 2020  干 &copy; All rights reserved. 湖北武汉</p>
+</div>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+ <script>
+            $('.fenye span').click(function(){
+            $(this).addClass('shake-it');
+
+                      });
+
+           $(window).scroll(function(){
+          var offsetTop = $(".anchor").offset().top;
+
+          if( offsetTop > 10){
+              $('.anchor').fadeIn(1000);
+          }
+          else{
+              $('.anchor').fadeOut(1000);
+          }
+      });
+     </script>
+</html>

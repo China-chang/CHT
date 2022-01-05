@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>注册百度账号</title>
+<style>
+         .img1{
+         	margin-left:443px;
+            margin-top:25px;
+         }
+         .word1{
+         	color:#666666;font-size:20px;
+         	margin-left:15px;
+         	margin-top:20px;
+         }
+         .word2{
+           margin-left:443px;
+           font-size: 15px;
+         }
+         .word3{
+         	 width: 350px;
+         	 height: 40px;
+             font-size: 15px;
+         }
+         .word4{
+         	 width: 178px;
+         	 height: 40px;
+             font-size: 15px;
+         }
+         .word5{
+         	 width: 155px;
+         	 height: 40px;
+             font-size: 15px;
+         }
+         .word6{
+         	margin-left:496px;
+         }
+         .word7{
+         	margin-left:550px;
+         }
+         .word8{width:60px;
+         	 height: 40px;
+             font-size: 10px;
+         	  background: #F7F7F7;
+         	  border: 1px solid #DDDDDD;
+         	 }
+         .lj{
+         	 text-decoration:none;
+         }
+         
+
+
+
+
+</style>
+</head>
+<body>
+<a href="http://www.baidu.com/"><img class='img1' src="https://passport.baidu.com/static/passpc-base/img/logo/baidu.gif"></a>
+<b class="word1">注册百度账号</b>
+<font size='2' class='word7'>我已注册，现在就</font>
+<button class='word8' type="button">登录</button>
+<hr color='#EBEBEB' size='5' width="70%" align="center">
+<br><br>
+<form method="post" action="/search/" >
+	{% csrf_token %}
+
+<b class="word2">用户名&nbsp; </b>
+<input class="word3" type="text" name="name" placeholder=" &nbsp;请设置用户名"><br><br>
+<b class="word2">手机号&nbsp; </b>
+<input class="word3" type="text" name="" placeholder=" &nbsp;可用于登录和找回密码"><br><br>
+<b class="word2">&nbsp;&nbsp;&nbsp;密码&nbsp;</b>
+<input class="word3" type="password" name="password" placeholder=" &nbsp;请设置登录密码"><br><br>
+<b class="word2">验证码&nbsp; </b>
+<input class="word4" type="text" name="phone_number" placeholder=" &nbsp;请输入验证码"> &nbsp;
+<button class="word5" type="button">获取短信验证码</button>
+<br><br>
+<input class="word6" type='checkbox' name='' value=''>
+<font size="2">阅读并接受<a href="http://passport.baidu.com/static/passpc-account/html/protocal.html" target="_blank" class="lj">《百度用户协议》</a>及<a href="http://privacy.baidu.com/mdetail?id=288" target="_blank" class="lj">《百度隐私权保护声明》</a>
+<br><br>
+<input class="word6" type="submit" src='zc.png'>
+
+</form>
+
+</body>
+</html>

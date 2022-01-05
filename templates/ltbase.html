@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/scenery.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main-body.css">
+</head>
+
+<body>
+    <header>
+        <div><img src="/static/img/scenery1.png"></div>
+        <div><img src="/static/img/scenery2.png"></div>
+        <div><img src="/static/img/scenery3.png"></div>
+        <div><img src="/static/img/scenery4.png"></div>
+        <div><img src="/static/img/scenery5.png"></div>
+        <div><img src="/static/img/scenery6.png"></div>
+    </header>
+
+    <div class="container">
+        {% block left %}
+
+        {% endblock %}
+
+        {% block comment %}
+
+        {% endblock %}
+
+    </div>
+
+
+    <div class="foot">
+       <p>Copyrights 2020  干 &copy; All rights reserved. 湖北武汉</p>
+    </div>
+</body>
+     <script src="/static/js/scenery.js"></script>
+
+
+</html>

@@ -1,0 +1,140 @@
+*{
+/*	初始化 取消页面内外边距*/
+	margin:0;
+	padding: 0;
+}
+
+body{
+/*	弹性布局*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background:rgb(38,188,213);
+/*    background-image:url("1.jpg");*/
+    background-repeat:no-repeat;
+
+}
+
+.container{
+	position:relative;
+	width: 100rem;
+
+}
+
+.content{
+    position:relative;
+    top:-60px;
+}
+
+.container img{
+     width: 95rem;
+     box-shadow:10px 10px 5px rgb(0,0,0,.8);
+}
+
+.panel{
+	width: 30%;
+	margin:10rem 0 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.switch span{
+	color: #ccc;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.switch span.active{
+	color: rgb(222,156,83);
+}
+
+form{
+	width: 12rem;
+	margin:2rem 0 0;
+}
+
+form .input{
+	position:relative;
+	opacity:1;
+	height: 2.2rem;
+	width: 16rem;
+	margin:2rem 0;
+	transition: .4s;
+ }
+.input input{
+	outline:none;
+	width:100%;
+/*	border:1px solid red;*/
+	border-bottom: .1rem solid rgb(222,211,140);
+    opacity:0.5;
+    font-size:1.2rem;
+    border-radius:1rem;
+}
+
+.input::after{
+	content: attr(placeholder);
+	position: absolute;
+	left: 0;
+	top: -10%;
+	font-size: 1.6rem;
+	color: rgb(222,156,83);
+	transition: .3s;
+}
+
+.input.focus::after{
+	top:-70%;
+	font-size: 1rem;
+}
+.login .input#phone,
+.login .input#repeat{
+    margin:0;
+    height: 0;
+    opacity:0;
+    z-index:-1;
+}
+
+form span{
+	display: block;
+	color: rgb(222,156,83);
+	font-size: .8rem;
+}
+
+form button{
+	border:none;
+	outline: none;
+	margin:2rem 0 0;
+	width: 125%;
+	height: 4rem;
+	border-radius: 3rem;
+	background:linear-gradient(to right,#03a9f4,#f441a5,#ffeb3b,#09a8f4);
+	box-shadow: 0 0 8px rgb(181,154,254);
+	cursor: pointer;
+	background-size:400%;
+}
+button{
+    text-transform:uppercase;
+    font-size:20px;
+    color:#fff;
+}
+.btn:hover{
+/*	动画 名称 时间 无限循环*/
+	animation:sun 8s infinite;
+}
+.r-btn:hover{
+    animation:moon 8s infinite;
+}
+@keyframes sun{
+	100%{
+/*		背景的位置*/
+		background-position: -400% 0;
+	}
+}
+
+@keyframes moon{
+	100%{
+/*		背景的位置*/
+		background-position: 400% 0;
+	}
+}

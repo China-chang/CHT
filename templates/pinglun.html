@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .body{
+            margin-left: 30px;
+        }
+        .be_hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>所有评论</h1>
+{{ html|safe }}
+
+
+<script src="{% static "js/jquery.min.js" %}"></script>
+<script>
+    $(function () {
+        $('.comment').click(function () {
+            if ($(this).next().hasClass('be_hidden')){
+                $(this).next().removeClass('be_hidden')
+            }else{
+                $(this).next().addClass('be_hidden')
+            }
+        })
+    })
+</script>
+
+
+</body>
+</html>

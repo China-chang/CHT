@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block bodycotent %}
+<h2>被改了，嘿嘿嘿</h2>
+<!--如果重写父类指定区域后，还能拥有父模板中的内容-->
+{{ block.super }}
+{% endblock bodycotent %}
+{% block title %}
+子模板
+{% endblock title %}
+

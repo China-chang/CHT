@@ -1,0 +1,16 @@
+{% extends 'ltbase.html' %}
+{% block content %}
+
+{% load mptt_comment_tags %}
+
+
+{% render_mptt_comment_form for post %}
+  <h3>All Posts</h3>
+  <div>
+    {% for post in post_list %}
+      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+      <p>created at {{ post.created }}</p>
+      <p>{{ post.context }}</p>
+    {% endfor %}
+  </div>
+{% endblock %}

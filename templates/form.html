@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <form action="/index_view/" method="post">
+        {% csrf_token %}
+
+        {{ comment_form }}
+        <p>
+            <label>用户名：</label><input type="text" name="username"/>
+        </p>
+
+        <p>
+            <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" name="password"/>
+        </p>
+
+        <p>
+            <button type="submit" name="dl">登录</button>
+            <button type="submit"  name="zc">注册</button>
+        </p>
+
+
+    </form>
+<body>
+
+</body>
+</html>
